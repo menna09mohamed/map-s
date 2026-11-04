@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>متحف مصر في عهد خلفاء محمد علي</title>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6eedc;--bg2:#fbf6ea;--paper:#fffaf0;--ink:#3b2a1c;--gold:#c9a24b;--gold2:#e6c878;--olive:#5b6b3a;--nile:#2f5d7c;--red:#9a3b2e;--ok:#4f7a35;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);background-image:repeating-linear-gradient(90deg,transparent 0 78px,rgba(201,162,75,.07) 78px 80px);color:var(--paper);font-family:"Noto Naskh Arabic","Segoe UI",Tahoma,serif;line-height:1.9;font-size:18px}
+h1,h2,h3{font-family:"Reem Kufi","Noto Naskh Arabic",serif;margin:.3em 0;color:var(--gold2)}
+main{max-width:980px;margin:auto;padding:12px 14px 60px}
+.btn{font:inherit;font-weight:700;background:var(--gold);color:#2a1d10;border:0;border-radius:10px;padding:8px 20px;cursor:pointer;border-bottom:4px solid #8d6e27}
+.btn:disabled{opacity:.45;cursor:not-allowed}.btn.alt{background:transparent;color:var(--gold2);border:2px solid var(--gold)}
+.btn:focus-visible,input:focus-visible,.opt:focus-within{outline:3px solid #fff;outline-offset:2px}
+.dash{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:6px;background:var(--bg2);border:1px solid var(--gold);border-radius:12px;padding:10px;margin-bottom:12px;font-size:15px;text-align:center}
+.dash b{display:block;color:var(--gold2);font-size:20px}
+.bar{height:12px;background:#0006;border-radius:8px;overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--olive),var(--gold));transition:width .6s}
+.hero{text-align:center;padding:28px 10px;border:3px double var(--gold);border-radius:14px 14px 0 0;background:linear-gradient(var(--bg2),var(--bg))}
+.hero h1{font-size:clamp(26px,6vw,46px)}
+.guide{display:flex;gap:12px;align-items:center;background:var(--paper);color:var(--ink);border-radius:14px;padding:10px 14px;margin:14px 0;border-right:8px solid var(--gold)}
+.guide span{font-size:46px}
+.map{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:16px 0}
+.door{background:var(--paper);color:var(--ink);border:4px solid var(--gold);border-radius:90px 90px 10px 10px;padding:22px 14px 14px;text-align:center;position:relative;min-height:190px}
+.door.lock{filter:grayscale(.8) brightness(.7)}.door.cur{box-shadow:0 0 28px 6px var(--gold2)}.door.done{border-color:var(--ok)}
+.door .ic{font-size:44px}.door h3{color:var(--ink);font-size:22px}
+.tag{display:inline-block;border-radius:20px;padding:0 12px;font-size:15px;color:#fff;background:var(--nile)}.done .tag{background:var(--ok)}.lock .tag{background:#555}
+.panel{background:var(--paper);color:var(--ink);border-radius:12px;padding:14px 18px;margin:14px 0;border:2px solid var(--gold)}
+.panel h2,.panel h3{color:var(--brown,#5a3b1a)}
+.panel ul{padding-inline-start:22px;margin:.3em 0}.panel li{margin:.3em 0}
+.panel b{background:#c9a24b55;border-radius:4px;padding:0 4px}
+.warn{background:#fff3;border-right:6px solid #e0a030;padding:6px 12px;border-radius:8px;font-size:16px;color:inherit}
+.panel .warn{color:var(--ink);background:#e0a03033}
+.tl{border-right:4px solid var(--gold);margin:10px 8px 0 0;padding-right:16px}.tl div{position:relative;margin:8px 0}
+.tl div:before{content:"";position:absolute;right:-26px;top:12px;width:14px;height:14px;border-radius:50%;background:var(--nile);border:3px solid var(--gold)}
+.tl strong{color:var(--red)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.opt{display:block;border:2px solid #8d6e27;border-radius:10px;padding:6px 12px;margin:8px 0;cursor:pointer;background:#fff6}
+.opt.ok{background:#4f7a3544;border-color:var(--ok)}.opt.no{background:#9a3b2e33;border-color:var(--red)}
+.fb{border-radius:10px;padding:8px 14px;margin:10px 0;font-weight:700}.fb.ok{background:#4f7a3533}.fb.no{background:#9a3b2e22}
+.ring{width:190px;height:190px;margin:auto;display:block}
+.cert{border:8px double var(--gold);background:var(--paper);color:var(--ink);text-align:center;padding:26px;border-radius:10px;margin:16px 0}
+.cert h2{color:var(--red);font-size:34px}
+.row{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+input[type=text]{font:inherit;padding:8px 14px;border-radius:10px;border:2px solid var(--gold);min-width:240px;max-width:100%}
+@media print{body{background:#fff}main>*:not(#cert){display:none!important}#cert{display:block!important;margin:0}.cert{border-color:#8d6e27}}
+
+body{background-color:#33202a;background-image:radial-gradient(circle at 50% 0,#5a3342 0,transparent 60%),repeating-linear-gradient(45deg,transparent 0 22px,rgba(201,162,75,.06) 22px 24px),repeating-linear-gradient(-45deg,transparent 0 22px,rgba(201,162,75,.06) 22px 24px);padding-bottom:70px}
+body:before{content:"";position:fixed;inset:0 0 auto;height:14px;background:linear-gradient(#e6c878,#8d6e27);z-index:5;box-shadow:0 4px 10px #0008}
+body:after{content:"";position:fixed;inset:auto 0 0;height:46px;background:repeating-conic-gradient(#efe6d3 0 25%,#6b5b4a 0 50%) 0 0/46px 46px;border-top:6px solid #c9a24b;z-index:5;box-shadow:0 -6px 14px #0008}
+main{border-inline:2px solid #c9a24b55;background:linear-gradient(90deg,#0003,transparent 8%,transparent 92%,#0003)}
+.hero{position:relative;background:linear-gradient(#0000,#0006),radial-gradient(ellipse at 50% 0,#c9a24b55,transparent 70%);border-radius:6px}
+.hero:before,.hero:after{content:"";position:absolute;top:0;bottom:0;width:34px;background:linear-gradient(90deg,#8d6e27,#f0dc9c 40%,#8d6e27);border-radius:4px;opacity:.9}
+.hero:before{right:8px}.hero:after{left:8px}
+.hero>*{position:relative;z-index:1}
+.frame{width:200px;height:260px;margin:10px auto;border:16px solid #b8903a;border-image:linear-gradient(135deg,#f0dc9c,#8d6e27,#f0dc9c,#8d6e27) 1;box-shadow:0 0 0 4px #5a3b1a,inset 0 0 18px #000a,0 14px 30px #000a;background:#e8dcc0;display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:70px;position:relative}
+.frame img{width:100%;height:100%;object-fit:cover;filter:sepia(.35)}
+.frame.sm{width:120px;height:150px;border-width:10px;font-size:44px;margin:0 auto 6px}
+.plaque{display:inline-block;background:linear-gradient(#e6c878,#a8842f);color:#2a1d10;border-radius:4px;padding:2px 18px;font-weight:700;box-shadow:0 2px 6px #000a;border:1px solid #6b5014}
+.door{border-radius:80px 80px 6px 6px;background:linear-gradient(#f3e8d0,#e0cfa8)}
+.door.lock:after{content:"⛔ الطريق مغلق";position:absolute;left:10%;right:10%;top:52%;background:#8a1f2b;color:#fff;border-radius:20px;padding:0 8px;font-size:15px;box-shadow:0 3px 6px #000a;transform:rotate(-4deg)}
+.up{display:inline-block;margin:4px}
+.up input{display:none}
+@media print{body:before,body:after{display:none}main{border:0;background:none}}
+@keyframes dooropen{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}#app.enter{animation:dooropen .8s ease}@media (prefers-reduced-motion:reduce){#app.enter{animation:none}}
+
+body{color:var(--ink);background-color:#f6eedc;background-image:radial-gradient(circle at 50% 0,#fffdf6 0,transparent 65%),repeating-linear-gradient(45deg,transparent 0 22px,rgba(201,162,75,.12) 22px 24px),repeating-linear-gradient(-45deg,transparent 0 22px,rgba(201,162,75,.12) 22px 24px)}
+body:before{box-shadow:0 3px 8px #0003}
+body:after{background:repeating-conic-gradient(#fffaf0 0 25%,#d8c8a6 0 50%) 0 0/46px 46px;box-shadow:0 -4px 10px #0002}
+main{background:linear-gradient(90deg,#c9a24b22,transparent 8%,transparent 92%,#c9a24b22)}
+h1,h2,h3{color:#7a5a18}
+.hero{background:linear-gradient(#fff0,#c9a24b1f),radial-gradient(ellipse at 50% 0,#fff8e0,transparent 75%);border-color:#c9a24b}
+.hero:before,.hero:after{opacity:.75}
+.btn.alt{color:#6b4c12;border-color:#b8903a;background:#fffaf0}
+.dash{border-color:#c9a24b;box-shadow:0 2px 8px #8d6e2733}.dash b{color:#8a5a12}
+.panel,.door,.guide{box-shadow:0 3px 10px #8d6e2733}
+.panel{background:#fffdf7}
+.panel h2,.panel h3{color:#7a5a18}
+.panel b{background:#e6c87866}
+.warn{background:#e6c87855}
+.bar{background:#c9a24b33}
+.door{background:linear-gradient(#fffdf7,#f1e4c4)}
+.door.lock{filter:grayscale(.5) brightness(.95);opacity:.8}
+.door.cur{box-shadow:0 0 24px 4px #e6c878}
+.opt{background:#fffdf7}
+.frame{box-shadow:0 0 0 4px #c9a24b,inset 0 0 14px #0006,0 10px 22px #8d6e2755}
+.cert{background:#fffdf7}
+.tl strong{color:#9a3b2e}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+/* محتوى الغرف: مأخوذ من صفحات الدرس المرفقة فقط */
+var R=[
+{n:"عباس حلمي الأول",per:"١٨٤٨م – ١٨٥٤م",ic:"🏛️",
+intro:"هو عباس بن طوسون بن «محمد علي». تولى حكم مصر خلفًا لعمه إبراهيم باشا، ولم تتجاوز فترة حكمه ست سنوات.",
+secs:[["المواصلات والتجارة (مميزات حكمه)",["أصلح <b>الطريق البري</b> بين القاهرة والسويس.","بدأ في تنفيذ مشروع مد <b>خط سكة حديد</b> بين القاهرة والإسكندرية.","بدأ في مد <b>الخطوط التلغرافية</b>.","كانت تلك الإصلاحات بهدف <b>تسهيل حركة التجارة</b>."]],
+["مساوئ حكمه: الرجعية والجمود",["أغلق معظم <b>المدارس والمصانع</b> التي أنشأها «محمد علي».","استدعى <b>البعثات العلمية</b> من فرنسا.","أهمل <b>الجيش والبحرية</b>."]]],
+tl:[["١٨٤٨م","تولى عباس حلمي الأول الحكم خلفًا لعمه إبراهيم باشا"],["١٨٥٤م","انتهاء حكمه بعد ست سنوات"]],
+qs:[["من والد عباس حلمي الأول؟",["طوسون بن محمد علي","إبراهيم بن محمد علي","سعيد بن محمد علي","إسماعيل بن إبراهيم"],0,"هو عباس بن طوسون بن «محمد علي»."],
+["كم بلغت مدة حكم عباس حلمي الأول؟",["سنة واحدة","ثلاث سنوات","ست سنوات","عشرون سنة"],2,"لم تتجاوز فترة حكمه ست سنوات."],
+["أي المشروعات الآتية بدأه عباس حلمي الأول بهدف تسهيل التجارة؟",["حفر ترعة الإسماعيلية","سكة حديد القاهرة – الإسكندرية","بناء دار الأوبرا","تأسيس صندوق الدين"],1,"بدأ في تنفيذ مشروع مد خط سكة حديد بين القاهرة والإسكندرية، وكان ذلك لتسهيل حركة التجارة."],
+["أي الإجراءات الآتية دليل على رجعية حكمه وجموده؟",["إصلاح الطريق بين القاهرة والسويس","مد الخطوط التلغرافية","إغلاق معظم المدارس والمصانع","البدء في السكة الحديد"],2,"أغلق معظم المدارس والمصانع التي أنشأها «محمد علي»، أما الباقي فمن إصلاحاته."],
+["لماذا يُعد إغلاق المدارس والمصانع وإهمال الجيش والبحرية تراجعًا عن نهضة محمد علي؟",["لأنها أنهت ما أقامه محمد علي من مؤسسات التعليم والصناعة والقوة العسكرية","لأنها زادت عدد البعثات","لأنها وسعت الخطوط التلغرافية","لأنها زادت مساحة الأراضي"],0,"المدارس والمصانع والجيش والبحرية من أسس الدولة التي بناها «محمد علي»، فإغلاقها وإهمالها تراجع عنها."]]},
+{n:"محمد سعيد باشا",per:"١٨٥٤م – ١٨٦٣م",ic:"⛵",
+intro:"هو محمد سعيد بن «محمد علي». تولى حكم مصر بعد وفاة عباس حلمي الأول باشا.",
+secs:[["الزراعة",["أصدر <b>اللائحة السعيدية</b>: أصبح الفلاح مالكًا للأرض لأبنائه، وحرًا في تصريف محاصيله الزراعية، وله حق التوريث.","خفف الضرائب وتجاوز عن المتأخر منها.","اهتم بتطهير <b>ترعة المحمودية</b> التي حُفرت في عهد «محمد علي»."]],
+["التجارة",["اهتم بشركات <b>الملاحة النهرية والبحرية</b>، فأنشأ شركة لنقل المحاصيل الزراعية والمسافرين عن طريق نهر النيل.","وأنشأ شركة لتسيير البواخر في البحرين المتوسط والأحمر."]],
+["السكك الحديدية والتلغرافات",["استكمل خط السكة الحديدية بين القاهرة والإسكندرية (الذي بدأه عباس حلمي الأول).","مد خط سكة حديدية بين القاهرة والسويس.","مد الخطوط التلغرافية بين الإسكندرية والقاهرة والسويس."]],
+["الجيش",["بذل جهودًا كبيرة للنهوض بالجيش الذي ضعف في عهد عباس حلمي الأول.","قصّر مدة الخدمة العسكرية إلى <b>عام واحد</b> وجعلها إجبارية على جميع المصريين.","فتح باب <b>الترقي</b> أمام الضباط المصريين."]],
+["الثقافة",["اهتم بالآثار المصرية، فجهز <b>مخازن في بولاق</b> لحفظ الآثار."]]],
+extra:"<div class='warn'>⚠️ صفحة التعليم وقناة السويس (صلة سعيد بديليسبس وامتياز حفر القناة لمدة ٩٩ سنة) في ملف الدرس مصورة بصورة غير واضحة، لذلك لم أدرج تفاصيلها ولم أبنِ عليها أسئلة. تحتاج هذه الصفحة إلى مراجعة المعلم.</div>",
+tl:[["١٨٥٤م","تولى سعيد باشا الحكم بعد وفاة عباس حلمي الأول"],["١٨٦٣م","نهاية فترة حكمه"]],
+qs:[["من والد محمد سعيد باشا؟",["عباس بن طوسون","إبراهيم باشا","محمد علي","إسماعيل"],2,"هو محمد سعيد بن «محمد علي»."],
+["ماذا أصبح الفلاح بموجب اللائحة السعيدية؟",["مالكًا للأرض","أجيرًا عند الدولة","جنديًا","موظفًا"],0,"بموجبها أصبح الفلاح مالكًا للأرض لأبنائه وحرًا في تصريف محاصيله."],
+["إلى كم قصّر سعيد باشا مدة الخدمة العسكرية؟",["عام واحد","ثلاثة أعوام","ستة أعوام","مدى الحياة"],0,"قصّر المدة إلى عام واحد وجعلها إجبارية على جميع المصريين."],
+["أي الخطوط استكمل سعيد باشا بعد أن بدأه عباس حلمي الأول؟",["سكة حديد القاهرة – السويس","سكة حديد القاهرة – الإسكندرية","خط التلغراف إلى السودان","ترعة المحمودية"],1,"استكمل خط السكة الحديدية بين القاهرة والإسكندرية الذي بدأه عباس حلمي الأول."],
+["لماذا تدل اللائحة السعيدية مع تخفيف الضرائب على اهتمامه بالفلاحين؟",["لأنها منحتهم ملكية الأرض وحرية تصريف المحاصيل وخففت عنهم الأعباء","لأنها أغلقت المدارس","لأنها ألغت الجيش","لأنها أنشأت دار الأوبرا"],0,"منح الفلاح الملكية والتوريث وحرية تصريف المحصول، وخفف الضرائب وتجاوز عن المتأخر، وكلها لإصلاح حاله."]]},
+{n:"الخديو إسماعيل",per:"١٨٦٣م – ١٨٧٩م",ic:"🏰",
+intro:"هو إسماعيل بن إبراهيم بن «محمد علي». تولى حكم مصر بعد وفاة عمه محمد سعيد باشا. يُعد عهده من أكثر الفترات تقدمًا وعمرانًا في تاريخ مصر الحديث.",
+secs:[["الزراعة والري",["زيادة مساحة الأراضي الزراعية.","التوسع في زراعة <b>القطن</b> و<b>قصب السكر</b>.","حفر <b>ترعة الإبراهيمية</b> و<b>ترعة الإسماعيلية</b>."]],
+["الصناعة والتجارة",["زيادة مصانع السكر.","إعادة فتح المصانع التي أنشأها «محمد علي»: النسيج والجلود والطوب والزجاج وغيرها.","إنشاء شركة للملاحة التجارية.","تطوير ميناءي <b>الإسكندرية والسويس</b>."]],
+["السكك الحديدية والبريد",["إنشاء عدة خطوط للسكك الحديدية.","مد الخطوط التلغرافية بين محافظات مصر، وامتدت إلى <b>السودان</b>.","إنشاء مصلحة <b>البريد المصري</b> ومكاتبها الفرعية في الإسكندرية والقاهرة والأقاليم."]],
+["النهضة الثقافية والعلمية",["مضاعفة ميزانية التعليم وإعادة فتح ديوان المدارس والمدارس التي أُغلقت.","إنشاء مدارس جديدة منها <b>مدرسة السنية للبنات</b>.","إرسال البعثات العلمية إلى الدول الأوروبية.","إنشاء <b>دار الأوبرا</b> و<b>دار الرصد بالعباسية</b> (المرصد الفلكي) و<b>الجمعية الجغرافية</b>.","البدء في إنشاء <b>دار الآثار العربية</b> عام ١٨٦٩م (تُعرف حاليًا باسم متحف الفن الإسلامي، وافتُتحت عام ١٩٠٣م في عهد الخديو عباس حلمي الثاني)."]],
+["النهضة الصحية والعمرانية",["إنشاء عدة مستشفيات في القاهرة والإسكندرية والأقاليم، وبذل جهود لمكافحة الأوبئة ومقاومة الأمراض.","الاهتمام بتخطيط المدن وتنظيمها وتجميلها، مثل القاهرة: أُعيد تخطيط أحياء بها، وأُنشئ حي <b>عابدين</b>، وأُنشئت قصور مثل <b>قصر عابدين</b> و<b>قصر القبة</b>."]],
+["الجيش والبحرية",["إنشاء المدارس الحربية والاستعانة بأكفأ المدرسين والضباط.","تزويد الجيش بالأسلحة الحديثة.","إنشاء عدة سفن حربية في ترسانات أوروبا.","تجديد المدرسة البحرية بالإسكندرية."]],
+["مجلس شورى النواب",["أنشأه الخديو إسماعيل عام <b>١٨٦٦م</b> وكان دوره استشاريًا: له حق مناقشة القوانين والضرائب من دون حق الاعتراض أو إصدار قرارات ملزمة.","أسهم في زيادة الوعي السياسي لدى المصريين وإتاحة حق التعبير عن مشكلاتهم.","هدفت سياسته الخارجية إلى زيادة نفوذ مصر وتعزيز مكانتها الدولية، والاستقلال التام عن الدولة العثمانية."]],
+["مساوئ حكمه: أزمة الديون والتدخل الأجنبي",["اقترض من الدول الأوروبية لدفع التعويضات الباهظة لشركة قناة السويس، وللإنفاق على المشروعات والقصور والحفلات (مثل حفل افتتاح القناة)، ولدفع أموال للسلطان العثماني للحصول على لقب <b>خديو</b> و<b>وراثة العرش في أبنائه</b>.","أسبابها: التوسع في الاقتراض من إنجلترا وفرنسا، وارتفاع الفوائد، وسوء الإدارة المالية.","نتائجها: بيع نصيب مصر في قناة السويس لإنجلترا لسداد الديون، وزيادة تدخل الدول الأوروبية في شؤون مصر المالية."]],
+["مظاهر التدخل الأجنبي",["<b>بعثة كيف</b> (١٨٧٥م): أرسلتها إنجلترا لمساعدة وزير المالية المصري في إصلاح الشؤون المالية.","<b>صندوق الدين</b> (١٨٧٦م): أعضاؤه مندوبون عن الدول الدائنة للرقابة على إيرادات مصر لتسديد الديون، ولا يحق لمصر أخذ قرض إلا بموافقة أغلبية أعضائه.","<b>المراقبة الثنائية</b>: مراقبان ماليان، إنجليزي لمراقبة الإيرادات وفرنسي لمراقبة المصروفات.","<b>لجنة التحقيق العليا الأوروبية</b> (١٨٧٨م): لدراسة أسباب العجز في إيرادات الدولة؛ قررت ضرورة تنازل الخديو عن أملاكه وأملاك عائلته وعن سلطته المطلقة، فقبل مطالبها.","<b>الوزارة المختلطة</b> برئاسة نوبار باشا: فيها وزيران أجنبيان، إنجليزي للمالية وفرنسي للأشغال؛ هدفها إصلاح الأحوال المالية والإدارية، وأدى وجودهما إلى زيادة النفوذ الأجنبي واستياء المصريين وسقوط الوزارة."]],
+["الحركة الوطنية",["أدى زيادة التدخل الأجنبي إلى ازدياد قوة الحركة الوطنية، وانحياز الخديو لها بعد أن فقد ممتلكاته وسلطته.","في مارس ١٨٧٩م وضع أعضاء الحركة الوطنية <b>اللائحة الوطنية</b>: طالبت بوزارة وطنية مسؤولة أمام مجلس نيابي حقيقي، وأشارت إلى أن البلاد ليست مفلسة وتستطيع سداد ديونها.","وافق الخديو عليها، فكلف <b>شريف باشا</b> بتشكيل وزارة بلا وزيرين أجنبيين، وأصدر مرسومًا في إبريل ١٨٧٩م بتسوية الديون.","ضغطت إنجلترا وفرنسا عليه ليتنازل عن العرش فرفض، فلجأتا إلى الدولة العثمانية، فصدر مرسوم السلطان بخلع إسماعيل وتولية ابنه <b>محمد توفيق</b>، وكان ذلك تمهيدًا للاحتلال البريطاني لمصر."]]],
+tl:[["١٨٦٣م","تولى الخديو إسماعيل الحكم"],["١٨٦٦م","إنشاء مجلس شورى النواب"],["١٨٦٩م","البدء في إنشاء دار الآثار العربية"],["١٨٧٥م","بعثة كيف"],["١٨٧٦م","صندوق الدين"],["١٨٧٨م","لجنة التحقيق العليا والوزارة المختلطة"],["مارس ١٨٧٩م","اللائحة الوطنية"],["إبريل ١٨٧٩م","مرسوم تسوية الديون ثم خلع إسماعيل وتولية توفيق"]],
+qs:[["بعد وفاة من تولى الخديو إسماعيل الحكم؟",["عمه محمد سعيد باشا","أبيه إبراهيم باشا","جده محمد علي","عباس حلمي الأول"],0,"تولى حكم مصر بعد وفاة عمه محمد سعيد باشا."],
+["في أي عام أنشأ الخديو إسماعيل مجلس شورى النواب؟",["١٨٤٨م","١٨٦٦م","١٨٧٦م","١٨٧٩م"],1,"أنشأه عام ١٨٦٦م."],
+["ما طبيعة دور مجلس شورى النواب؟",["تشريعي ملزم","استشاري","قضائي","عسكري"],1,"كان دوره استشاريًا: يناقش القوانين والضرائب دون حق الاعتراض أو إصدار قرارات ملزمة."],
+["ماذا ترتب على التوسع في الاقتراض وسوء الإدارة المالية؟",["أزمة ديون وزيادة التدخل الأجنبي في شؤون مصر","زيادة استقلال مصر المالي","إلغاء صندوق الدين","زيادة مساحة الأراضي فقط"],0,"أدى الاقتراض وارتفاع الفوائد وسوء الإدارة إلى أزمة ديون وبيع نصيب مصر في القناة وزيادة تدخل أوروبا."],
+["لماذا كان خلع إسماعيل وتولية توفيق تمهيدًا للاحتلال البريطاني؟",["لأنه جاء بعد ضغط إنجلترا وفرنسا على الخديو وزيادة تدخلهما في شؤون مصر","لأن الحركة الوطنية طلبت ذلك","لأن إسماعيل وافق على التنازل عن العرش","لأن السلطان العثماني كان مؤيدًا لسياسة إسماعيل الاستقلالية"],0,"ضغطت الدولتان عليه ليتنازل فرفض، فلجأتا إلى السلطان العثماني فصدر مرسوم الخلع، وكان ذلك تمهيدًا للاحتلال."]]}
+];
+var KEY="museum_egypt_v1",PTS=10,PASS=4,S,V={v:"home",i:0,q:false,fb:null};
+function load(){try{S=JSON.parse(localStorage.getItem(KEY))}catch(e){}if(!S||!S.r)S={name:"",r:R.map(function(){return[]})}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function esc(t){var d=document.createElement("div");d.textContent=t;return d.innerHTML}
+function ok(i){return S.r[i].filter(function(x,k){return x===R[i].qs[k][2]}).length}
+function done(i){return S.r[i].length==R[i].qs.length}
+function pass(i){return done(i)&&ok(i)>=PASS}
+function open(i){return i==0||pass(i-1)}
+function stat(){var a=0,c=0,d=0;R.forEach(function(r,i){a+=S.r[i].length;c+=ok(i);if(pass(i))d++});
+var cur=R.findIndex(function(r,i){return !pass(i)});return{a:a,c:c,w:a-c,d:d,cur:cur<0?R.length:cur,pts:c*PTS}}
+function dash(){var s=stat(),pc=Math.round(s.d/R.length*100);
+return '<div class="dash"><div>الطالب<b>'+esc(S.name)+'</b></div><div>المرحلة الحالية<b>'+Math.min(s.cur+1,R.length)+' / '+R.length+'</b></div><div>مكتملة<b>'+s.d+'</b></div><div>متبقية<b>'+(R.length-s.d)+'</b></div><div>أسئلة أُجيب عنها<b>'+s.a+'</b></div><div>صحيحة<b>'+s.c+'</b></div><div>خاطئة<b>'+s.w+'</b></div><div>النقاط<b>'+s.pts+'</b></div><div style="grid-column:1/-1">التقدم في المتحف '+pc+'%<div class="bar"><i style="width:'+pc+'%"></i></div></div></div>'}
+function img(i){try{return localStorage.getItem(KEY+"_img"+i)}catch(e){return null}}
+function portrait(i,sm){var d=img(i);return '<div class="frame'+(sm?' sm':'')+'">'+(d?'<img src="'+d+'" alt="'+R[i].n+'">':'<span>'+R[i].ic+'</span>')+'</div>'}
+function upImg(inp,i){var f=inp.files[0];if(!f)return;var fr=new FileReader();fr.onload=function(){var im=new Image();im.onload=function(){var m=520,k=Math.min(1,m/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=im.width*k;c.height=im.height*k;c.getContext("2d").drawImage(im,0,0,c.width,c.height);try{localStorage.setItem(KEY+"_img"+i,c.toDataURL("image/jpeg",.85))}catch(e){alert("تعذر حفظ الصورة على هذا الجهاز")}render()};im.onerror=function(){alert("الملف ليس صورة صالحة")};im.src=fr.result};fr.readAsDataURL(f)}
+function delImg(i){try{localStorage.removeItem(KEY+"_img"+i)}catch(e){}render()}
+function guide(t){return '<div class="guide"><span>🧔</span><div><b>المرشد:</b> '+t+'</div></div>'}
+function mapHtml(){var s=stat();return '<div class="map">'+R.map(function(r,i){var st=pass(i)?"done":done(i)?"cur":open(i)?"cur":"lock";var tag=pass(i)?"✅ مكتملة":done(i)?"❌ لم تُجتز":open(i)?"✨ الغرفة الحالية":"🔒 مقفولة";
+var b=open(i)?'<button class="btn" onclick="go('+i+')">'+(pass(i)?"زيارة مرة أخرى":"ادخل الغرفة")+'</button>':'';
+return '<div class="door '+st+'">'+(open(i)?portrait(i,1):'<div class="ic">🔒</div>')+'<h3>'+r.n+'</h3><div>'+r.per+'</div><span class="tag">'+tag+'</span><div style="margin-top:8px">'+b+'</div></div>'}).join("")+'</div>'}
+function home(){var s=stat(),started=s.a>0||S.name;
+var h='<div class="hero"><div style="font-size:50px">🏺</div><h1>متحف مصر في عهد خلفاء محمد علي</h1><p>أهلًا بك أيها الطالب! ستتجول في ثلاث قاعات، في كل قاعة حاكم من خلفاء محمد علي: تقرأ عن أعماله، وتستمع إلى الشرح، ثم تخوض تحديًا من خمسة أسئلة. لا تُفتح القاعة التالية إلا إذا أجبت عن <b>٤ أسئلة على الأقل</b> من ٥ (٨٠٪).</p></div>';
+if(!S.name){h+=guide("مرحبًا بك! اكتب اسمك لنبدأ الرحلة.")+'<div class="panel" style="text-align:center"><input type="text" id="nm" placeholder="اكتب اسمك هنا" maxlength="40" aria-label="اسم الطالب"> <button class="btn" onclick="start()">ابدأ الرحلة</button></div>'}
+else{h+=dash()+guide(s.d==R.length?"أحسنت! أنهيت جميع القاعات. توجه إلى قاعة التتويج.":"القاعة الحالية مضاءة. أكمل رحلتك يا "+esc(S.name)+"!")+mapHtml();
+h+='<div class="panel"><b>تمهيد:</b> بعد أن نجح «محمد علي» في وضع أسس الدولة المصرية الحديثة، تولى الحكم ابنه <b>إبراهيم باشا</b> الذي ساعد والده في أعماله الحربية والعسكرية وقاد الجيش في كثير من المعارك، وتولى الحكم بعد مرض والده ولم يبق إلا عدة أشهر قبل وفاة والده. ثم تولى بعده أبناء محمد علي وأحفاده.</div>';
+if(s.d==R.length)h+='<p style="text-align:center"><button class="btn" onclick="fin()">قاعة التتويج 🏆</button></p>';
+h+='<p style="text-align:center"><button class="btn alt" onclick="resetAll()">بدء رحلة جديدة (للمعلم أو طالب جديد)</button></p>'}
+return h}
+function start(){var v=document.getElementById("nm").value.trim();if(!v){alert("اكتب اسمك أولًا");return}S.name=v;save();render()}
+function resetAll(){if(confirm("سيتم مسح كل التقدم والنتائج المحفوظة على هذا الجهاز. هل أنت متأكد؟")){stopV();S={name:"",r:R.map(function(){return[]})};save();V={v:"home",i:0,q:false,fb:null};render()}}
+function go(i){if(!open(i))return;stopV();V={v:"room",i:i,q:S.r[i].length>0&&!done(i),fb:null,just:null};render();enter();window.scrollTo(0,0)}
+function room(i){var r=R[i];var h='<p><button class="btn alt" onclick="home_()">⬅ خريطة المتحف</button></p>'+dash();
+h+='<div class="hero">'+portrait(i)+'<span class="plaque">'+r.n+'</span><h1>'+r.n+'</h1><p>فترة الحكم: '+r.per+'</p><label class="btn alt up">🖼 إضافة صورة الحاكم<input type="file" accept="image/*" onchange="upImg(this,'+i+')"></label>'+(img(i)?'<button class="btn alt up" onclick="delImg('+i+')">حذف الصورة</button>':'')+'<p class="warn" style="font-size:15px">ابحثي عن صورة تاريخية مناسبة للحاكم، واحفظيها على جهازك، ثم ارفعيها هنا. تُحفظ على هذا الجهاز فقط.</p></div>';
+h+=guide("اقرأ المعلومات جيدًا، فكل سؤال في التحدي مأخوذ من هذه الغرفة.");
+h+='<div class="tools"><button class="btn" onclick="speak('+i+')">🔊 استمع إلى الشرح</button><button class="btn alt" onclick="pauseV()">⏸ إيقاف مؤقت</button><button class="btn alt" onclick="resumeV()">▶ استكمال</button><button class="btn alt" onclick="speak('+i+')">🔁 إعادة</button><button class="btn alt" onclick="stopV()">⏹ إيقاف</button></div><div id="vmsg" class="warn" style="display:none"></div>';
+h+='<div class="panel"><h2>نبذة تاريخية</h2><p>'+r.intro+'</p></div>';
+r.secs.forEach(function(s){h+='<div class="panel"><h3>'+s[0]+'</h3><ul>'+s[1].map(function(x){return'<li>'+x+'</li>'}).join("")+'</ul></div>'});
+if(r.extra)h+=r.extra;
+h+='<div class="panel"><h3>الخط الزمني</h3><div class="tl">'+r.tl.map(function(t){return'<div><strong>'+t[0]+'</strong>: '+t[1]+'</div>'}).join("")+'</div></div>';
+h+='<div class="warn">ملاحظة: لم تُدرج صور الكتاب والخرائط في هذه النسخة، وتُستبدل بالرموز التعبيرية. يمكن إضافتها لاحقًا من ملف الدرس.</div>';
+h+='<div id="quiz">'+(V.q||done(i)?quiz(i):'<p style="text-align:center"><button class="btn" onclick="V.q=true;render();document.getElementById(\'quiz\').scrollIntoView()">انتقل إلى التحدي 🎯</button></p>')+'</div>';return h}
+function home_(){stopV();V.v="home";render()}
+function quiz(i){var a=S.r[i],r=R[i];if(done(i)){return result(i)}
+var k=a.length,q=r.qs[k],lv=["سهل","سهل إلى متوسط","متوسط","متوسط إلى صعب","صعب"][k];
+var h='<div class="panel"><h2>التحدي</h2><p>السؤال '+(k+1)+' من '+r.qs.length+' ('+lv+') — لكل سؤال محاولة واحدة فقط.</p><h3>'+q[0]+'</h3>';
+h+=q[1].map(function(o,j){return'<label class="opt"><input type="radio" name="o" value="'+j+'"> '+o+'</label>'}).join("");
+return h+'<button class="btn" onclick="submitA()">إرسال الإجابة</button></div>'}
+function submitA(){var i=V.i,k=S.r[i].length;if(k>=R[i].qs.length)return;var s=document.querySelector("input[name=o]:checked");if(!s){alert("اختر إجابة أولًا. لا يمكن تخطي السؤال.");return}
+var c=+s.value,q=R[i].qs[k];S.r[i].push(c);save();if(S.r[i].length==R[i].qs.length)V.just=i;var good=c===q[2];
+var h='<div class="panel"><h3>'+q[0]+'</h3>'+q[1].map(function(o,j){return'<div class="opt '+(j==q[2]?"ok":j==c?"no":"")+'">'+(j==q[2]?"✔ ":j==c?"✘ ":"")+o+'</div>'}).join("");
+h+=good?'<div class="fb ok">أحسنت! إجابة صحيحة، لقد أتقنت هذه المعلومة. 🎉 (+'+PTS+' نقاط)</div>':'<div class="fb no">الإجابة الصحيحة: «'+q[1][q[2]]+'».<br>التفسير: '+q[3]+'<br>المعلومة التي يجب تذكرها: '+q[3]+'<br>لا بأس، تعلّم من الخطأ واستمر في رحلتك! (لا نقاط لهذه الإجابة)</div>';
+var nx=i+1<R.length;h+=done(i)&&pass(i)?'<div class="warn">🎉 مبروك! اجتزت الغرفة ('+ok(i)+' من '+R[i].qs.length+'). سننتقل تلقائيًا إلى '+(nx?'الغرفة التالية':'قاعة التتويج')+' خلال <b id="cd">5</b> ثوانٍ…</div></div>':'<button class="btn" onclick="render()">'+(done(i)?"عرض النتيجة":"السؤال التالي")+'</button></div>';
+document.getElementById("quiz").innerHTML=h;refreshDash();if(done(i)&&pass(i))startCd()}
+function refreshDash(){var d=document.querySelector(".dash");if(d)d.outerHTML=dash()}
+function result(i){var c=ok(i),n=R[i].qs.length,p=pass(i),h='<div class="panel"><h2>'+(p?"🎉 مبروك! اجتزت الغرفة":"لم تجتز هذه المرحلة")+'</h2><p>إجاباتك الصحيحة: <b>'+c+'</b> من '+n+' ('+Math.round(c/n*100)+'%) — الخاطئة: <b>'+(n-c)+'</b> — النقاط: <b>'+c*PTS+'</b></p>';
+if(p){var nx=i+1<R.length;h+='<p>✅ تم إتمام الغرفة'+(nx?" وفتح الغرفة التالية: <b>"+R[i+1].n+"</b>.":" وهذه آخر غرفة!")+'</p>'+(V.just===i?'<p class="warn">🚪 سننتقل تلقائيًا إلى '+(nx?'الغرفة التالية':'قاعة التتويج')+' خلال <b id="cd">5</b> ثوانٍ…</p>':'')}
+else{h+='<p>الغرفة التالية ما زالت مقفولة؛ المطلوب ٨٠٪ على الأقل (٤ من ٥). لا تُعاد الأسئلة.</p><h3>مراجعة الأخطاء</h3><ul>';
+S.r[i].forEach(function(x,k){var q=R[i].qs[k];if(x!==q[2])h+='<li><b>'+q[0]+'</b><br>الصحيح: '+q[1][q[2]]+' — '+q[3]+'</li>'});h+='</ul><button class="btn alt" onclick="home_()">العودة إلى الخريطة</button>'}
+return h+'</div>'}
+function fin(){if(!R.every(function(r,i){return pass(i)}))return;stopV();V.v="final";render();enter();window.scrollTo(0,0)}
+function final_(){var s=stat(),tot=R.reduce(function(t,r){return t+r.qs.length},0),pc=Math.round(s.c/tot*1000)/10,C=2*Math.PI*80,off=C*(1-pc/100);
+var h='<p><button class="btn alt" onclick="home_()">⬅ خريطة المتحف</button></p><div class="hero"><div style="font-size:54px">🏆</div><h1>قاعة التتويج</h1><p>تهانينا يا '+esc(S.name)+'! أكملت الرحلة التاريخية عبر عهود عباس حلمي الأول وسعيد باشا والخديو إسماعيل.</p></div>';
+h+='<div class="panel" style="text-align:center"><svg class="ring" viewBox="0 0 200 200" role="img" aria-label="'+pc+'%"><circle cx="100" cy="100" r="80" fill="none" stroke="#0002" stroke-width="18"/><circle cx="100" cy="100" r="80" fill="none" stroke="#c9a24b" stroke-width="18" stroke-linecap="round" stroke-dasharray="'+C+'" stroke-dashoffset="'+off+'" transform="rotate(-90 100 100)"/><text x="100" y="112" text-anchor="middle" font-size="40" font-weight="700" fill="#3b2a1c">'+pc+'%</text></svg>';
+h+='<p>الغرف المكتملة: <b>'+s.d+'</b> — الأسئلة المجاب عنها: <b>'+s.a+'</b> — صحيحة: <b>'+s.c+'</b> — خاطئة: <b>'+s.w+'</b> — الدرجات: <b>'+s.pts+' من '+tot*PTS+'</b></p><p>النسبة = '+s.c+' ÷ '+tot+' × ١٠٠ (محسوبة على جميع أسئلة المتحف)</p></div>';
+h+='<div class="cert" id="cert"><div style="font-size:40px">🏺</div><h2>شهادة إتمام</h2><p>تشهد إدارة متحف مصر في عهد خلفاء محمد علي بأن الطالب</p><h1 style="color:#3b2a1c">'+esc(S.name)+'</h1><p>قد أتم جميع قاعات المتحف الثلاث بنسبة نهائية قدرها <b>'+pc+'%</b></p></div>';
+return h+'<p style="text-align:center"><button class="btn" onclick="saveCert()">💾 حفظ الشهادة كصورة</button> <button class="btn alt" onclick="window.print()">🖨 طباعة</button> <span id="cmsg" class="warn" style="display:none"></span></p>'}
+async function saveCert(){var m=document.getElementById("cmsg");m.style.display="inline-block";var s=stat(),tot=R.reduce(function(t,r){return t+r.qs.length},0),pc=Math.round(s.c/tot*1000)/10;
+var d=null;try{d=await claude.use("downloads")}catch(e){}
+if(!d){m.textContent="الحفظ غير متاح هنا. التقطي لقطة شاشة للشهادة.";return}
+try{await document.fonts.ready}catch(e){}
+var c=document.createElement("canvas");c.width=1600;c.height=1130;var x=c.getContext("2d");x.fillStyle="#f3e8d0";x.fillRect(0,0,1600,1130);
+x.strokeStyle="#b8903a";x.lineWidth=14;x.strokeRect(40,40,1520,1050);x.lineWidth=4;x.strokeRect(70,70,1460,990);
+x.direction="rtl";x.textAlign="center";var F="'Reem Kufi','Noto Naskh Arabic',serif";
+function t(s2,y,sz,col){x.font="700 "+sz+"px "+F;x.fillStyle=col;x.fillText(s2,800,y)}
+t("🏺",230,100,"#3b2a1c");t("شهادة إتمام",350,100,"#9a3b2e");t("تشهد إدارة متحف مصر في عهد خلفاء محمد علي بأن الطالب",470,44,"#3b2a1c");
+t(S.name,610,96,"#3b2a1c");t("قد أتم جميع قاعات المتحف الثلاث بنجاح",720,44,"#3b2a1c");t("النسبة النهائية: "+pc+"%",820,64,"#5b6b3a");
+t("الإجابات الصحيحة "+s.c+" من "+tot+" — الدرجات "+s.pts,910,40,"#3b2a1c");t(new Date().toLocaleDateString("ar-EG"),1000,34,"#8d6e27");
+c.toBlob(async function(b){try{await d.save({filename:"certificate-"+Date.now()+".png",data:b});m.textContent="تم طلب الحفظ."}catch(e){m.textContent=e&&e.code=="declined"?"تم إلغاء الحفظ.":"تعذر الحفظ. التقطي لقطة شاشة للشهادة."}},"image/png")}
+/* الشرح الصوتي: بطلب الطالب فقط */
+var SS=window.speechSynthesis;
+var T=null;function stopV(){clearInterval(T);if(SS)SS.cancel()}
+function adv(){var i=V.i;V.just=null;stopV();if(i+1<R.length)go(i+1);else fin()}
+function startCd(){clearInterval(T);var n=5;T=setInterval(function(){n--;var e=document.getElementById('cd');if(e)e.textContent=n;if(n<=0)adv()},1000)}
+function enter(){var a=document.getElementById('app');a.classList.remove('enter');void a.offsetWidth;a.classList.add('enter')}function pauseV(){if(SS)SS.pause()}function resumeV(){if(SS)SS.resume()}
+function speak(i){var m=document.getElementById("vmsg");if(!SS){m.style.display="block";m.textContent="متصفحك لا يدعم الشرح الصوتي.";return}
+SS.cancel();var r=R[i],t=[r.n+". فترة الحكم "+r.per+". "+r.intro];r.secs.forEach(function(s){t.push(s[0]);s[1].forEach(function(x){t.push(x)})});
+var v=SS.getVoices().filter(function(x){return /^ar/i.test(x.lang)})[0];
+if(!v){m.style.display="block";m.textContent="لم يُعثر على صوت عربي في جهازك؛ قد يُقرأ الشرح بصوت غير عربي. ثبّت صوتًا عربيًا من إعدادات النظام."}else m.style.display="none";
+t.forEach(function(x){var u=new SpeechSynthesisUtterance(x.replace(/<[^>]+>/g,""));u.lang="ar-SA";if(v)u.voice=v;u.rate=.9;SS.speak(u)})}
+if(SS)SS.getVoices();
+function render(){var a=document.getElementById("app");a.innerHTML=V.v=="room"&&open(V.i)?room(V.i):V.v=="final"?final_():home();
+if(V.v=="room"&&V.just===V.i&&pass(V.i)){document.getElementById("quiz").scrollIntoView();startCd()}}
+window.addEventListener("beforeunload",stopV);
+load();render();
+</script>
+</body>
+</html>
